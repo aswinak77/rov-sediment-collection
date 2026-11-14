@@ -3,14 +3,14 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
-#include "rov_interfaces/action/collect_sediment.hpp"
+#include "rov_interface/action/collect_sediment.hpp"
 
 using namespace std::chrono_literals;
 
 class CancelCollectionClient : public rclcpp::Node
 {
 public:
-  using Collect = rov_interfaces::action::CollectSediment;
+  using Collect = rov_interface::action::CollectSediment;
 
   CancelCollectionClient() : Node("cancel_client")
   {
