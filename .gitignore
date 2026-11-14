@@ -1,0 +1,22 @@
+#build architectures
+
+build/
+install/
+log/
+
+#IDE
+
+.vscode/
+.idea/
+
+#compiled files
+
+*.o
+*.so
+*.a
+
+#temp
+
+*.swp
+*~
+.DS_Store

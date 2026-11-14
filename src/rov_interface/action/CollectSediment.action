@@ -1,0 +1,15 @@
+#Goal
+
+float32 collection_duration
+float32 target_volume
+---
+#Result
+
+bool success
+float32 collected_volume
+string message 
+---
+#Feedback
+
+string current_state
+float32 progress_percentage
