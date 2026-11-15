@@ -66,7 +66,6 @@ public:
       std::bind(&SedimentController::handle_accepted, this,
         std::placeholders::_1));
 
-    // Run one small step of the collection sequence every 100 ms.
     timer_ = create_wall_timer(
       100ms, std::bind(&SedimentController::run_step, this));
 
@@ -406,8 +405,6 @@ int main(int argc, char ** argv)
 
   auto node = std::make_shared<SedimentController>();
 
-  // A single-threaded executor keeps this beginner-friendly state machine
-  // and its sensor callbacks running one at a time.
   rclcpp::executors::SingleThreadedExecutor executor;
   executor.add_node(node->get_node_base_interface());
   executor.spin();
