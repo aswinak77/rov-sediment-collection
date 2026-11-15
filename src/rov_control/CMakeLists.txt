@@ -30,7 +30,6 @@ ament_target_dependencies(controller
   rov_interface
 )
 
-# Hardware simulator
 add_executable(simulator src/simulator.cpp)
 
 ament_target_dependencies(simulator
@@ -38,7 +37,6 @@ ament_target_dependencies(simulator
   std_msgs
 )
 
-# Action cancellation client
 add_executable(cancel src/cancel.cpp)
 
 ament_target_dependencies(cancel
